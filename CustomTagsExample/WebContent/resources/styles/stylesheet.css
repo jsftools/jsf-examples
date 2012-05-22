@@ -1,0 +1,32 @@
+body, html {
+	
+	font-family: Arial, Verdana, Sans-Serif;
+	font-weight: 10pt;
+	
+}
+
+.quotation {
+	
+	background-color:#dcdcdc;
+	font-style: italx;
+	width: 50%;
+	padding:25px;
+	
+	font-family: Georgia, serif;
+	font-style: italic;	
+	color: #555
+}
+
+.quotation p {
+	border-left: 15px solid #555;
+	padding:25px;
+	font-size: 18pt;
+}
+
+.quotation .source {
+	text-align: right;	
+}
+
+.quotation .source:before {
+	content: ' ~ '
+}
