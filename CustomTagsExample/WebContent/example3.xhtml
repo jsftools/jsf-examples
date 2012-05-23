@@ -5,11 +5,27 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ta="http://thomasasel.de/jsf-examples/customtags">
 
+<h:head>
+</h:head>
+
 <h:body>
 	<h:outputStylesheet library="styles" name="stylesheet.css"/>
 	<h:form>
-		<h1>Simple Tag Example</h1>	
-		<ta:quote>The Web does not just connect machines, it connects people.</ta:quote>
+	
+		<h1>Using components inside custom tags</h1>	
+		
+		<ta:commentableQuote source="Tim Berners Lee">
+			The Web does not just connect machines, it connects people.
+		</ta:commentableQuote>
+		
+		<p>
+		<h2>Comments:</h2> <br />
+		<h:outputText value="#{flash['input']}" />
+		</p>
+		
 	</h:form>
+
 </h:body>
+
+
 </html>

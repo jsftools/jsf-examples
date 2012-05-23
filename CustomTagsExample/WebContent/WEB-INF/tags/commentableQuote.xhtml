@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition>
+
+	<div class="quotation">
+		<p><ui:insert /></p>
+		<div class="source">#{source}</div>
+		<hr />
+		<h2>Post a comment:</h2>
+		<h:inputText value="#{flash['input']}" /> <h:commandButton action="/example3.xhtml" value="submit" />
+	</div>
+
+</ui:composition>
+
+</html>

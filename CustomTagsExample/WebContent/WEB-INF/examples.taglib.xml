@@ -17,6 +17,10 @@
  			<name>source</name>
  		</attribute>
  	</tag>
-
+ 	
+ 	<tag>
+ 		<tag-name>commentableQuote</tag-name>
+ 		<source>tags/commentableQuote.xhtml</source>
+ 	</tag>
 
  </facelet-taglib>
