@@ -1,0 +1,34 @@
+#surefire
+#Mon May 14 13:54:35 CEST 2012
+testClassesDirectory=D\:\\ws\\Prototyping\\PlainProject\\target\\test-classes
+classPathUrl.4=D\:\\maven3\\repository\\commons-collections\\commons-collections\\3.2\\commons-collections-3.2.jar
+classPathUrl.3=D\:\\maven3\\repository\\org\\apache\\myfaces\\core\\myfaces-impl\\2.1.6\\myfaces-impl-2.1.6.jar
+classPathUrl.2=D\:\\maven3\\repository\\org\\apache\\myfaces\\core\\myfaces-api\\2.1.6\\myfaces-api-2.1.6.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\ws\\Prototyping\\PlainProject\\target\\classes
+reportsDirectory=D\:\\ws\\Prototyping\\PlainProject\\target\\surefire-reports
+classPathUrl.0=D\:\\ws\\Prototyping\\PlainProject\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\ws\\Prototyping\\PlainProject\\src\\test\\java
+surefireClassPathUrl.1=D\:\\maven3\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.7.1\\surefire-api-2.7.1.jar
+surefireClassPathUrl.0=D\:\\maven3\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.7.1\\surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=D\:\\ws\\Prototyping\\PlainProject\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+classPathUrl.9=D\:\\maven3\\repository\\javax\\servlet\\jstl\\1.2\\jstl-1.2.jar
+classPathUrl.8=D\:\\maven3\\repository\\commons-digester\\commons-digester\\1.8\\commons-digester-1.8.jar
+classPathUrl.7=D\:\\maven3\\repository\\commons-logging\\commons-logging\\1.1.1\\commons-logging-1.1.1.jar
+childDelegation=false
+classPathUrl.6=D\:\\maven3\\repository\\commons-beanutils\\commons-beanutils\\1.8.3\\commons-beanutils-1.8.3.jar
+classPathUrl.5=D\:\\maven3\\repository\\commons-codec\\commons-codec\\1.3\\commons-codec-1.3.jar

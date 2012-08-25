@@ -3,11 +3,12 @@
   <!-- 
   	Please note: Maven is used solely for the purpose of dependency management for this example.
   -->
-
+  
   <modelVersion>4.0.0</modelVersion>
-  <groupId>ViewExpiredExample</groupId>
-  <artifactId>ViewExpiredExample</artifactId>
+  <groupId>CustomScopeExample</groupId>
+  <artifactId>CustomScopeExample</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   
  	<dependencies>
 		<dependency>
@@ -37,6 +38,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>		
+
 	</dependencies>
 
 	<build>
