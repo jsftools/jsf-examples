@@ -12,13 +12,23 @@
 <h:body>
 
 	<h:form>
-	
-		<h1><h:outputText value="Persons" /></h1>	
-		
+
+		<h1>
+			<h:outputText value="People" />
+		</h1>
+
 		<h:dataTable value="#{personViewBean.personList}" var="person">
-			<ta:dynamicColumns model="#{personViewBean.columnModel}" />
+			<ta:dynamicColumns model="#{personViewBean.columnModel1}" />
 		</h:dataTable>
-		
+
+		<h1>
+			<h:outputText value="Addresses" />
+		</h1>
+
+		<h:dataTable value="#{personViewBean.personList}" var="person">
+			<ta:dynamicColumns model="#{personViewBean.columnModel2}" />
+		</h:dataTable>
+
 	</h:form>
 
 </h:body>

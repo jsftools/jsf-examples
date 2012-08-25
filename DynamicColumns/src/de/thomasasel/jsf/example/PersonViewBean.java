@@ -10,11 +10,21 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean
 public class PersonViewBean {
 
-	public List<Columns> getColumnModel() {
+	public List<Columns> getColumnModel1() {
 		List<Columns> columnModel = new ArrayList<Columns>();
 
 		columnModel.add(Columns.name);
 		columnModel.add(Columns.address);
+		columnModel.add(Columns.email);
+
+		return columnModel;
+	}
+
+	public List<Columns> getColumnModel2() {
+		List<Columns> columnModel = new ArrayList<Columns>();
+
+		columnModel.add(Columns.address);
+		columnModel.add(Columns.personSummary);
 
 		return columnModel;
 	}
@@ -42,5 +52,6 @@ public class PersonViewBean {
 
 		return persons;
 	}
+
 
 }
