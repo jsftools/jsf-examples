@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+	
+	<!-- Define the view-specific PhaseListener -->
+	<f:phaseListener type="de.oio.jsf.counter.ComponentCounter"/>
+	
+	<h1>Enter Address</h1>
+
+	<h:form id="form">
+	
+		<h:panelGrid id="addressGrid" columns="2">
+			<h:outputLabel id="firstname_label" for="firstname" value="Firstname" />
+			<h:inputText id="firstname" value="#{addressBean.firstname}" />
+			
+			<h:outputLabel  id="lastname_label" for="lastname" value="Lastname" />
+			<h:inputText id="lastname" value="#{addressBean.lastname}" />
+			
+			<h:outputLabel id="street_label" for="street" value="Street" />
+			<h:inputText id="street" value="#{addressBean.street}" />
+			
+			<h:outputLabel id="number_label" for="number" value="Number" />
+			<h:inputText id="number" value="#{addressBean.number}" />
+			
+			<h:outputLabel id="zip_label" for="zip" value="Zip" />
+			<h:inputText id="zip" value="#{addressBean.zip}" />
+			
+			<h:outputLabel id="city_label" for="city" value="City" />
+			<h:inputText id="city" value="#{addressBean.city}" />
+				
+		</h:panelGrid>
+		
+		<h:commandButton value="submit" />
+		
+	</h:form>
+
+</h:body>
+
+
+</html>
