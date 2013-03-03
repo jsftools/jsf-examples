@@ -10,7 +10,8 @@ import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
 
 /**
- * PhaseListener that logs number of components in the JSF component tree and basic component information.
+ * PhaseListener that logs number of components in the 
+ * JSF component tree as well as some basic component information.
  * 
  * @author Thomas Asel
  *
