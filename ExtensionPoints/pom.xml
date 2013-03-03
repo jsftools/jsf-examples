@@ -1,25 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <!-- 
-  	Please note: Maven is used solely for the purpose of dependency management for this example.
-  -->
+	<!-- Please note: Maven is used solely for the purpose of dependency management 
+		for this example. -->
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ViewExpiredExample</groupId>
-  <artifactId>ViewExpiredExample</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
- 	<dependencies>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.myfaces.core</groupId> -->
-<!-- 			<artifactId>myfaces-api</artifactId> -->
-<!-- 			<version>2.1.6</version> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.myfaces.core</groupId> -->
-<!-- 			<artifactId>myfaces-impl</artifactId> -->
-<!-- 			<version>2.1.6</version> -->
-<!-- 		</dependency> -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ExtensionPoints</groupId>
+	<artifactId>ViewExpiredExample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.myfaces.core</groupId> -->
+		<!-- <artifactId>myfaces-api</artifactId> -->
+		<!-- <version>2.1.6</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.myfaces.core</groupId> -->
+		<!-- <artifactId>myfaces-impl</artifactId> -->
+		<!-- <version>2.1.6</version> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -31,12 +31,29 @@
 			<artifactId>jsf-impl</artifactId>
 			<version>2.1.6</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>3.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>cupertino</artifactId>
+			<version>1.0.8</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
-		</dependency>		
+		</dependency>
+
+		<dependency>
+			<groupId>org.atmosphere</groupId>
+			<artifactId>atmosphere-runtime</artifactId>
+			<version>1.0.0.RC1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -56,5 +73,14 @@
 		</pluginManagement>
 
 	</build>
-  
+
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
 </project>

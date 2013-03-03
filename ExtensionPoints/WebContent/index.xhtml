@@ -2,18 +2,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"/>
+	<h:outputStylesheet library="css" name="bootstrap-responsive.min.css" />
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputScript library="js" name="bootstrap.min.js"/>
 
+	<script type="text/javascript">
+	function handleMessage(msg) {
+		msg.severity = 'info';
+		growl.show([msg]);
+	}
+	</script>
 </h:head>
 
 <h:body>
-	<h:form>
-	
-		<h1><h:outputText value="Hello JSF Example" /></h1>	
-		
+
+	<header class="jumbotron subhead">
+	<div class="container">
+		<h1>MessageBoard</h1>
+		<p class="lead">Post something. Awesome.</p>
+	</div>
+	</header>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <div class="span8">
+    
+      	<p:growl widgetVar="growl" showDetail="true" />
+
+	<h:form id="form">
+
+		<h:inputTextarea id="inputMessage" value="#{postBean.inputMessage}" />
+		<br />
+		<h:commandButton id="submitButton" value="post"
+			action="#{postBean.postMessage}" />
+
 	</h:form>
+
+	<hr />
+
+	<h:panelGroup id="messages">
+		<ui:repeat var="msg" value="#{messageBean.messages}">
+
+			<div class="message">
+				<h:outputText id="message" value="#{msg}" />
+			</div>
+
+		</ui:repeat>
+	</h:panelGroup>
+
+	<p:socket channel="/board" onMessage="handleMessage">
+		<p:ajax event="message" update="messages" />
+	</p:socket>
+    </div>
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+  </div>
+</div>
 
 </h:body>
 
