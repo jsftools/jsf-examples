@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://java.sun.com/jsf/composite"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="label" />
+        <cc:attribute name="value" />
+        <cc:attribute name="required" />
+        <cc:attribute name="requiredMessage" required="false" default="An input is required"/>
+        <cc:attribute name="validatorMessage" required="false" default="Invalid input"/>
+        
+        <cc:editableValueHolder name="input" targets="input"/> 
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <div class="labelledInput">
+            <h:outputLabel id="label" value="#{cc.attrs.label}" for="input" styleClass="labelledInput-label" />
+            
+            <h:inputText id="input" 
+                         value="#{cc.attrs.value}" 
+                         required="#{cc.attrs.required}" 
+                         requiredMessage="#{cc.attrs.requiredMessage}"
+                         validatorMessage="#{cc.attrs.validatorMessage}"
+                         styleClass="labelledInput-input #{cc.findComponent('input').valid?'':'validation-failed'}" />
+            
+            <h:panelGroup id="message" layout="block" styleClass="validation-hint" rendered="#{! cc.findComponent('input').valid}">
+                <h:message for="input"/>
+            </h:panelGroup>
+        </div>
+        
+    </cc:implementation>
+</html>

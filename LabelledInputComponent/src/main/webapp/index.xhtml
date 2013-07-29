@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:comp="http://java.sun.com/jsf/composite/components"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="layout" name="screen.css" />
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            
+            <h:panelGrid columns="2">
+
+                <comp:labelledInput label="Firstname:" value="#{address.firstName}" required="true" />
+                <comp:labelledInput label="Lastname:" value="#{address.lastName}" required="true" />
+                <comp:labelledInput label="Street:" value="#{address.street}" required="true" />
+                <comp:labelledInput label="Number:" value="#{address.number}" required="true" />
+                <comp:labelledInput label="ZIP:" value="#{address.zip}" required="true" validatorMessage="Please enter a valid zipcode">
+                    <f:validateLength for="input" minimum="5" maximum="5" />
+                </comp:labelledInput>
+                <comp:labelledInput label="City:" value="#{address.city}" required="true" />
+
+            </h:panelGrid>
+
+            <h:commandButton value="submit" />
+        
+        </h:form>
+    </h:body>
+</html>
+

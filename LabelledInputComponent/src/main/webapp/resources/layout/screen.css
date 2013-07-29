@@ -1,0 +1,36 @@
+body, html {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.labelledInput {
+    vertical-align: top;
+    height: 60px;
+}
+
+.labelledInput>label {
+    display: block;
+}
+
+.labelledInput>input {
+    width: 200px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.validation-hint {
+    color: #f00;
+    width: 200px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.validation-hint:before {
+    content: "\21AF   ";
+}
+
+.validation-failed {
+    border: 1px dashed #f00 !important;
+    background-color: antiquewhite;
+}
+
